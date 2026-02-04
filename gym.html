@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PowerFit Gym | Фитнес зала в София</title>
+    <meta name="description" content="Модерна фитнес зала в София. Кардио, силови тренировки, групови класове и персонални треньори.">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23e63946'/%3E%3Cpath d='M30 40 L50 30 L70 40 L65 60 L50 70 L35 60 Z' fill='white'/%3E%3Ccircle cx='40' cy='50' r='5' fill='%23e63946'/%3E%3Ccircle cx='60' cy='50' r='5' fill='%23e63946'/%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --color-primary: #e63946;
+            --color-primary-dark: #c1121f;
+            --color-secondary: #ff6b35;
+            --color-accent: #fff3f4;
+            --color-dark: #1a1a1a;
+            --color-bg: #ffffff;
+            --color-text: #2d2d2d;
+            --color-text-light: #6b6b6b;
+            --color-white: #ffffff;
+            --font-heading: 'Oswald', sans-serif;
+            --font-body: 'Roboto', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--color-text);
+            background-color: var(--color-bg);
+            line-height: 1.7;
+            font-size: 16px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            line-height: 1.2;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); }
+        h2 { font-size: clamp(2rem, 4vw, 3rem); }
+        h3 { font-size: 1.5rem; }
+
+        p {
+            color: var(--color-text-light);
+            margin-bottom: 1rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 36px;
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-primary {
+            background: var(--color-primary);
+            color: var(--color-white);
+        }
+
+        .btn-primary:hover {
+            background: var(--color-primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(230, 57, 70, 0.4);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--color-dark);
+            border: 2px solid var(--color-dark);
+        }
+
+        .btn-outline:hover {
+            background: var(--color-dark);
+            color: var(--color-white);
+        }
+
+        section {
+            padding: 100px 0;
+        }
+
+        @media (max-width: 768px) {
+            section { padding: 70px 0; }
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 60px;
+        }
+
+        .section-label {
+            color: var(--color-primary);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 0.8rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 20px 0;
+            transition: all 0.3s ease;
+            background: var(--color-white);
+        }
+
+        header.scrolled {
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            padding: 15px 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--color-dark);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--color-primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--color-dark);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-links a:hover {
+            color: var(--color-primary);
+        }
+
+        .nav-cta {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 1001;
+        }
+
+        .mobile-menu-btn span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background: var(--color-dark);
+            margin: 6px 0;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--color-bg);
+            z-index: 999;
+            padding: 100px 30px 30px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+            text-align: center;
+        }
+
+        .mobile-menu ul li {
+            margin-bottom: 20px;
+        }
+
+        .mobile-menu ul a {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--color-dark);
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 900px) {
+            .nav-links { display: none; }
+            .nav-cta .btn { display: none; }
+            .mobile-menu-btn { display: block; }
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            padding-top: 100px;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: var(--color-white);
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            z-index: 0;
+            opacity: 0.3;
+        }
+
+        .hero-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 600px;
+        }
+
+        .hero h1 {
+            margin-bottom: 1.5rem;
+            color: var(--color-white);
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 2.5rem;
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .hero-features {
+            display: flex;
+            gap: 30px;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .hero-feature {
+            text-align: center;
+        }
+
+        .hero-feature .number {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--color-primary);
+        }
+
+        .hero-feature .label {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.7);
+        }
+
+        @media (max-width: 900px) {
+            .hero-bg {
+                width: 100%;
+            }
+            .hero-content {
+                max-width: 100%;
+                text-align: center;
+            }
+            .hero-buttons {
+                justify-content: center;
+            }
+        }
+
+        .services {
+            background: var(--color-white);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        @media (max-width: 900px) {
+            .services-grid { grid-template-columns: 1fr; }
+        }
+
+        .service-card {
+            background: var(--color-accent);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-card-image {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .service-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .service-card:hover .service-card-image img {
+            transform: scale(1.1);
+        }
+
+        .service-card-content {
+            padding: 25px;
+        }
+
+        .service-card h3 {
+            margin-bottom: 10px;
+            color: var(--color-dark);
+        }
+
+        .pricing {
+            background: var(--color-accent);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        @media (max-width: 900px) {
+            .pricing-grid { grid-template-columns: 1fr; }
+        }
+
+        .pricing-card {
+            background: var(--color-white);
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .pricing-card:hover {
+            border-color: var(--color-primary);
+            transform: translateY(-5px);
+        }
+
+        .pricing-card.featured {
+            background: var(--color-primary);
+            color: var(--color-white);
+        }
+
+        .pricing-card.featured h3,
+        .pricing-card.featured .price {
+            color: var(--color-white);
+        }
+
+        .pricing-card .price {
+            font-family: var(--font-heading);
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--color-primary);
+            margin: 20px 0;
+        }
+
+        .pricing-card.featured .price {
+            color: var(--color-white);
+        }
+
+        .pricing-list {
+            list-style: none;
+            text-align: left;
+            margin: 30px 0;
+        }
+
+        .pricing-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .pricing-list li::before {
+            content: '✓';
+            color: var(--color-primary);
+            font-weight: 700;
+        }
+
+        .contact {
+            background: var(--color-white);
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+        }
+
+        @media (max-width: 900px) {
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .contact-form-card {
+            background: var(--color-accent);
+            padding: 40px;
+            border-radius: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--color-dark);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px 18px;
+            border: 2px solid #eee;
+            border-radius: 8px;
+            background: var(--color-white);
+            font-family: var(--font-body);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--color-primary);
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .contact-form-card .btn {
+            width: 100%;
+            justify-content: center;
+        }
+
+        footer {
+            background: var(--color-dark);
+            color: rgba(255,255,255,0.6);
+            text-align: center;
+            padding: 40px 24px;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">Power<span>Fit</span></a>
+                <ul class="nav-links">
+                    <li><a href="#services">Услуги</a></li>
+                    <li><a href="#pricing">Цени</a></li>
+                    <li><a href="#contact">Контакти</a></li>
+                </ul>
+                <div class="nav-cta">
+                    <a href="#contact" class="btn btn-primary">Започни сега</a>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="#services">Услуги</a></li>
+            <li><a href="#pricing">Цени</a></li>
+            <li><a href="#contact">Контакти</a></li>
+        </ul>
+    </div>
+
+    <section class="hero">
+        <div class="hero-bg">
+            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&auto=format&fit=crop&w=1974&q=80" alt="Gym">
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h1>Преобразете тялото си</h1>
+                <p class="hero-subtitle">
+                    Модерна фитнес зала с най-доброто оборудване. Групови класове, персонални треньори и програми за всеки.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">Започни безплатна пробна седмица</a>
+                    <a href="#services" class="btn btn-outline" style="background: rgba(255,255,255,0.1); color: white; border-color: white;">Виж услугите</a>
+                </div>
+                <div class="hero-features">
+                    <div class="hero-feature">
+                        <div class="number">500+</div>
+                        <div class="label">Активни членове</div>
+                    </div>
+                    <div class="hero-feature">
+                        <div class="number">20+</div>
+                        <div class="label">Треньори</div>
+                    </div>
+                    <div class="hero-feature">
+                        <div class="number">24/7</div>
+                        <div class="label">Отворено</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Нашите услуги</span>
+                <h2>Всичко за вашата фитнес цел</h2>
+                <p>От кардио до силови тренировки, имаме всичко необходимо за постигане на вашите цели</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-card-image">
+                        <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Силови тренировки">
+                    </div>
+                    <div class="service-card-content">
+                        <h3>Силови тренировки</h3>
+                        <p>Модерно оборудване за цялостна силова подготовка</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-card-image">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Кардио">
+                    </div>
+                    <div class="service-card-content">
+                        <h3>Кардио зона</h3>
+                        <p>Бягащи пътеки, велоергометри и други кардио машини</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-card-image">
+                        <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Групови класове">
+                    </div>
+                    <div class="service-card-content">
+                        <h3>Групови класове</h3>
+                        <p>Йога, пилатес, кроссфит и много други групови тренировки</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Членски планове</span>
+                <h2>Изберете вашия план</h2>
+                <p>Гъвкави планове за всеки бюджет и цели</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Месечен</h3>
+                    <div class="price">35<span>€</span></div>
+                    <ul class="pricing-list">
+                        <li>Неограничен достъп</li>
+                        <li>Групови класове</li>
+                        <li>Безплатна консултация</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline">Избери</a>
+                </div>
+                <div class="pricing-card featured">
+                    <h3>Тримесечен</h3>
+                    <div class="price">90<span>€</span></div>
+                    <p style="color: rgba(255,255,255,0.8);">Спестете 15€</p>
+                    <ul class="pricing-list">
+                        <li>Всичко от Месечен план</li>
+                        <li>Персонална тренировка</li>
+                        <li>План за хранене</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary" style="background: white; color: var(--color-primary);">Избери</a>
+                </div>
+                <div class="pricing-card">
+                    <h3>Годишен</h3>
+                    <div class="price">300<span>€</span></div>
+                    <p>Спестете 120€</p>
+                    <ul class="pricing-list">
+                        <li>Всичко от Тримесечен план</li>
+                        <li>Неограничени персонални тренировки</li>
+                        <li>Приоритетна поддръжка</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline">Избери</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Контакти</span>
+                <h2>Започнете днес</h2>
+                <p>Попълнете формата и ще се свържем с вас за безплатна пробна седмица</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-form-card">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Вашето име</label>
+                            <input type="text" id="name" name="name" placeholder="Иван Петров" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Имейл</label>
+                            <input type="email" id="email" name="email" placeholder="ivan@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Телефон</label>
+                            <input type="tel" id="phone" name="phone" placeholder="0888 123 456">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Съобщение</label>
+                            <textarea id="message" name="message" placeholder="Разкажете ни за вашите цели..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Изпрати заявка</button>
+                    </form>
+                </div>
+                <div>
+                    <h3 style="margin-bottom: 1.5rem;">Информация</h3>
+                    <p style="margin-bottom: 2rem;">Нашата фитнес зала се намира в центъра на София с лесен достъп и паркинг.</p>
+                    <p style="margin-bottom: 1rem;"><strong>Адрес:</strong> бул. Витоша 45, София</p>
+                    <p style="margin-bottom: 1rem;"><strong>Телефон:</strong> 0888 123 456</p>
+                    <p style="margin-bottom: 1rem;"><strong>Имейл:</strong> info@powerfit.bg</p>
+                    <p><strong>Работно време:</strong> 24/7</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 PowerFit Gym. Всички права запазени.</p>
+        </div>
+    </footer>
+
+    <script>
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenuBtn.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Благодарим ви! Ще се свържем с вас скоро.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

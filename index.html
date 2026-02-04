@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Професионални уебсайтове за салони за красота</title>
-    <meta name="description" content="Модерен уебсайт за вашия салон за красота. Готов до 7 дни. Достъпни цени.">
+    <title>Професионални уебсайтове за малки бизнеси</title>
+    <meta name="description" content="Модерни уебсайтове за малки бизнеси. Готови до 7 дни. Достъпни цени.">
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23c9a87c'/%3E%3Crect x='15' y='25' width='70' height='50' rx='8' fill='white' opacity='0.95'/%3E%3Ccircle cx='25' cy='35' r='4' fill='%23ff6b6b'/%3E%3Ccircle cx='37' cy='35' r='4' fill='%23ffd93d'/%3E%3Ccircle cx='49' cy='35' r='4' fill='%236bcb77'/%3E%3Crect x='22' y='47' width='56' height='4' rx='2' fill='%23c9a87c' opacity='0.4'/%3E%3Crect x='22' y='55' width='40' height='4' rx='2' fill='%23c9a87c' opacity='0.4'/%3E%3Crect x='22' y='63' width='48' height='4' rx='2' fill='%23c9a87c' opacity='0.4'/%3E%3C/svg%3E">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%234a90e2'/%3E%3Crect x='20' y='25' width='60' height='50' rx='8' fill='white' opacity='0.95'/%3E%3Cpath d='M35 40 L50 50 L65 40' stroke='%234a90e2' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='40' cy='60' r='3' fill='%234a90e2'/%3E%3Ccircle cx='50' cy='60' r='3' fill='%234a90e2'/%3E%3Ccircle cx='60' cy='60' r='3' fill='%234a90e2'/%3E%3C/svg%3E">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -18,16 +18,17 @@
         }
 
         :root {
-            --color-primary: #c9a87c;
-            --color-primary-dark: #b8956a;
-            --color-accent: #e8d4c4;
-            --color-bg: #fffbf8;
-            --color-bg-alt: #fff7f2;
-            --color-text: #3d3d3d;
-            --color-text-light: #6b6b6b;
+            --color-primary: #4a90e2;
+            --color-primary-dark: #357abd;
+            --color-accent: #e8f4fd;
+            --color-bg: #ffffff;
+            --color-bg-alt: #f8fafc;
+            --color-text: #1a202c;
+            --color-text-light: #64748b;
             --color-white: #ffffff;
-            --font-heading: 'Cormorant Garamond', serif;
-            --font-body: 'Nunito', sans-serif;
+            --color-success: #10b981;
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Inter', sans-serif;
         }
 
         html {
@@ -44,7 +45,7 @@
 
         /* Container */
         .container {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 24px;
         }
@@ -52,29 +53,30 @@
         /* Typography */
         h1, h2, h3 {
             font-family: var(--font-heading);
-            font-weight: 600;
-            line-height: 1.3;
+            font-weight: 700;
+            line-height: 1.2;
         }
 
         h1 {
-            font-size: clamp(2.2rem, 5vw, 3.5rem);
+            font-size: clamp(2.5rem, 6vw, 4rem);
             color: var(--color-text);
         }
 
         h2 {
-            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-size: clamp(2rem, 4vw, 3rem);
             color: var(--color-text);
             margin-bottom: 1rem;
         }
 
         h3 {
-            font-size: 1.4rem;
+            font-size: clamp(1.3rem, 2vw, 1.6rem);
             color: var(--color-text);
         }
 
         p {
             color: var(--color-text-light);
             margin-bottom: 1rem;
+            font-size: 1.1rem;
         }
 
         /* Buttons */
@@ -87,7 +89,7 @@
             font-size: 1rem;
             font-weight: 600;
             text-decoration: none;
-            border-radius: 50px;
+            border-radius: 12px;
             transition: all 0.3s ease;
             cursor: pointer;
             border: none;
@@ -101,12 +103,12 @@
         .btn-primary:hover {
             background: var(--color-primary-dark);
             transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(201, 168, 124, 0.3);
+            box-shadow: 0 10px 30px rgba(74, 144, 226, 0.3);
         }
 
         .btn-secondary {
             background: transparent;
-            color: var(--color-primary-dark);
+            color: var(--color-primary);
             border: 2px solid var(--color-primary);
         }
 
@@ -117,7 +119,7 @@
 
         /* Section Styling */
         section {
-            padding: 80px 0;
+            padding: 100px 0;
         }
 
         @media (max-width: 768px) {
@@ -133,6 +135,7 @@
             letter-spacing: 2px;
             font-size: 0.85rem;
             margin-bottom: 0.5rem;
+            display: block;
         }
 
         /* ==================== HERO SECTION ==================== */
@@ -142,26 +145,7 @@
             align-items: center;
             position: relative;
             overflow: hidden;
-        }
-
-        .hero-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-4.0.3&auto=format&fit=crop&w=1974&q=80') center/cover no-repeat;
-            z-index: 0;
-        }
-
-        .hero-bg::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(255,251,248,0.95) 0%, rgba(255,247,242,0.85) 100%);
+            background: linear-gradient(135deg, #f8fafc 0%, #e8f4fd 100%);
         }
 
         .hero .container {
@@ -170,7 +154,9 @@
         }
 
         .hero-content {
-            max-width: 700px;
+            max-width: 800px;
+            text-align: center;
+            margin: 0 auto;
         }
 
         .hero h1 {
@@ -178,32 +164,118 @@
         }
 
         .hero-subtitle {
-            font-size: 1.2rem;
+            font-size: clamp(1.1rem, 2vw, 1.3rem);
             color: var(--color-text-light);
-            margin-bottom: 2rem;
-            max-width: 550px;
+            margin-bottom: 2.5rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .hero-buttons {
             display: flex;
             flex-wrap: wrap;
             gap: 16px;
+            justify-content: center;
         }
 
         .hero-badge {
             display: inline-block;
             background: var(--color-accent);
             color: var(--color-primary-dark);
-            padding: 8px 16px;
-            border-radius: 30px;
+            padding: 10px 20px;
+            border-radius: 50px;
             font-size: 0.9rem;
             font-weight: 600;
             margin-bottom: 1.5rem;
         }
 
+        /* ==================== EXAMPLES SECTION ==================== */
+        .examples-section {
+            background: var(--color-white);
+        }
+
+        .examples-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 60px;
+        }
+
+        .examples-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        @media (max-width: 900px) {
+            .examples-grid {
+                grid-template-columns: 1fr;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .examples-grid {
+                max-width: 100%;
+            }
+        }
+
+        .example-card {
+            background: var(--color-bg-alt);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .example-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            border-color: var(--color-primary);
+        }
+
+        .example-card-image {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+            background: var(--color-accent);
+            position: relative;
+        }
+
+        .example-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            transition: transform 0.5s ease;
+        }
+
+        .example-card:hover .example-card-image img {
+            transform: scale(1.1);
+        }
+
+        .example-card-content {
+            padding: 30px;
+        }
+
+        .example-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .example-card p {
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        .example-card .btn {
+            width: 100%;
+            justify-content: center;
+        }
+
         /* ==================== WHO THIS IS FOR ==================== */
         .who-section {
-            background: var(--color-white);
+            background: var(--color-bg-alt);
         }
 
         .who-content {
@@ -230,7 +302,7 @@
 
         .who-highlight {
             font-weight: 600;
-            color: var(--color-text);
+            color: var(--color-primary);
         }
 
         .who-image {
@@ -251,77 +323,20 @@
         }
 
         .who-list li {
-            padding: 10px 0;
+            padding: 12px 0;
             padding-left: 30px;
             position: relative;
             color: var(--color-text-light);
+            font-size: 1.05rem;
         }
 
         .who-list li::before {
             content: '✓';
             position: absolute;
             left: 0;
-            color: var(--color-primary);
+            color: var(--color-success);
             font-weight: 700;
-        }
-
-        /* ==================== DEMO SECTION ==================== */
-        .demo-section {
-            background: var(--color-bg-alt);
-            text-align: center;
-        }
-
-        .demo-content {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .demo-content h2 {
-            margin-bottom: 1rem;
-        }
-
-        .demo-content p {
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
-        }
-
-        .demo-preview {
-            background: var(--color-white);
-            border-radius: 20px;
-            padding: 20px;
-            margin-top: 40px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
-        }
-
-        .demo-preview-header {
-            display: flex;
-            gap: 8px;
-            margin-bottom: 15px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid var(--color-accent);
-        }
-
-        .demo-preview-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: var(--color-accent);
-        }
-
-        .demo-preview-dot:nth-child(1) { background: #ff6b6b; }
-        .demo-preview-dot:nth-child(2) { background: #ffd93d; }
-        .demo-preview-dot:nth-child(3) { background: #6bcb77; }
-
-        .demo-preview-content {
-            border-radius: 12px;
-            overflow: hidden;
-        }
-
-        .demo-preview-content img {
-            width: 100%;
-            height: 350px;
-            object-fit: cover;
-            object-position: top;
+            font-size: 1.2rem;
         }
 
         /* ==================== BENEFITS SECTION ==================== */
@@ -331,7 +346,7 @@
 
         .benefits-header {
             text-align: center;
-            max-width: 600px;
+            max-width: 700px;
             margin: 0 auto 50px;
         }
 
@@ -348,9 +363,9 @@
         }
 
         .benefit-card {
-            background: var(--color-bg);
-            padding: 30px;
-            border-radius: 16px;
+            background: var(--color-bg-alt);
+            padding: 40px;
+            border-radius: 20px;
             transition: all 0.3s ease;
         }
 
@@ -360,24 +375,29 @@
         }
 
         .benefit-icon {
-            width: 60px;
-            height: 60px;
+            width: 70px;
+            height: 70px;
             background: var(--color-accent);
-            border-radius: 12px;
+            border-radius: 16px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .benefit-icon svg {
+            width: 32px;
+            height: 32px;
+            fill: var(--color-primary);
         }
 
         .benefit-card h3 {
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.75rem;
         }
 
         .benefit-card p {
             margin-bottom: 0;
-            font-size: 0.95rem;
+            font-size: 1rem;
         }
 
         /* ==================== HOW IT WORKS SECTION ==================== */
@@ -387,7 +407,7 @@
 
         .how-header {
             text-align: center;
-            max-width: 600px;
+            max-width: 700px;
             margin: 0 auto 60px;
         }
 
@@ -411,8 +431,8 @@
         }
 
         .step-number {
-            width: 70px;
-            height: 70px;
+            width: 80px;
+            height: 80px;
             background: var(--color-primary);
             color: var(--color-white);
             border-radius: 50%;
@@ -420,7 +440,7 @@
             align-items: center;
             justify-content: center;
             font-family: var(--font-heading);
-            font-size: 1.8rem;
+            font-size: 2rem;
             font-weight: 700;
             margin: 0 auto 1.5rem;
         }
@@ -430,8 +450,8 @@
         }
 
         .step p {
-            font-size: 0.95rem;
-            max-width: 280px;
+            font-size: 1rem;
+            max-width: 300px;
             margin: 0 auto;
         }
 
@@ -440,9 +460,9 @@
             .steps::before {
                 content: '';
                 position: absolute;
-                top: 35px;
-                left: 20%;
-                right: 20%;
+                top: 40px;
+                left: 15%;
+                right: 15%;
                 height: 2px;
                 background: var(--color-accent);
                 z-index: 0;
@@ -461,19 +481,20 @@
 
         .pricing-header {
             text-align: center;
-            max-width: 600px;
+            max-width: 700px;
             margin: 0 auto 50px;
         }
 
         .pricing-card {
             max-width: 500px;
             margin: 0 auto;
-            background: linear-gradient(135deg, var(--color-bg) 0%, var(--color-bg-alt) 100%);
+            background: linear-gradient(135deg, var(--color-bg-alt) 0%, var(--color-white) 100%);
             border-radius: 24px;
             padding: 50px 40px;
             padding-top: 60px;
             text-align: center;
             position: relative;
+            border: 2px solid var(--color-accent);
         }
 
         .pricing-badge {
@@ -486,8 +507,8 @@
             padding: 10px 24px;
             font-size: 0.85rem;
             font-weight: 600;
-            border-radius: 30px;
-            box-shadow: 0 4px 15px rgba(201, 168, 124, 0.4);
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(74, 144, 226, 0.4);
             white-space: nowrap;
         }
 
@@ -533,8 +554,9 @@
         }
 
         .pricing-features .check {
-            color: var(--color-primary);
+            color: var(--color-success);
             font-weight: 700;
+            font-size: 1.2rem;
         }
 
         .pricing-guarantee {
@@ -548,7 +570,7 @@
 
         /* ==================== CONTACT SECTION ==================== */
         .contact-section {
-            background: linear-gradient(135deg, var(--color-text) 0%, #2d2d2d 100%);
+            background: linear-gradient(135deg, var(--color-text) 0%, #2d3748 100%);
             color: var(--color-white);
         }
 
@@ -661,8 +683,13 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.4rem;
             flex-shrink: 0;
+        }
+
+        .contact-info-icon svg {
+            width: 24px;
+            height: 24px;
+            fill: var(--color-white);
         }
 
         .contact-info-text h4 {
@@ -709,40 +736,11 @@
 
         /* ==================== FOOTER ==================== */
         footer {
-            background: #1a1a1a;
-            color: rgba(255, 255, 255, 0.5);
+            background: #1a202c;
+            color: rgba(255, 255, 255, 0.6);
             text-align: center;
-            padding: 24px;
+            padding: 40px 24px;
             font-size: 0.9rem;
-        }
-
-        /* ==================== FLOATING PHONE BUTTON ==================== */
-        .phone-float {
-            position: fixed;
-            bottom: 24px;
-            right: 24px;
-            width: 60px;
-            height: 60px;
-            background: var(--color-primary);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 6px 20px rgba(201, 168, 124, 0.4);
-            z-index: 1000;
-            transition: all 0.3s ease;
-            text-decoration: none;
-        }
-
-        .phone-float:hover {
-            transform: scale(1.1);
-            box-shadow: 0 8px 25px rgba(201, 168, 124, 0.5);
-        }
-
-        .phone-float svg {
-            width: 28px;
-            height: 28px;
-            fill: white;
         }
 
         /* ==================== ANIMATIONS ==================== */
@@ -761,53 +759,84 @@
             animation: fadeInUp 0.8s ease-out;
         }
 
-        /* ==================== GALLERY PREVIEW ==================== */
-        .gallery-preview {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
-            margin-top: 30px;
-        }
-
-        .gallery-preview img {
-            width: 100%;
-            height: 120px;
-            object-fit: cover;
-            border-radius: 10px;
-            transition: transform 0.3s ease;
-        }
-
-        .gallery-preview img:hover {
-            transform: scale(1.05);
-        }
-
-        @media (max-width: 768px) {
-            .gallery-preview {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
     </style>
 </head>
 <body>
     <!-- HERO SECTION -->
     <section class="hero" id="home">
-        <div class="hero-bg"></div>
         <div class="container">
             <div class="hero-content">
-                <span class="hero-badge">Специално за салони за красота</span>
-                <h1>Вашият салон заслужава да изглежда професионално онлайн</h1>
+                <span class="hero-badge">За малки бизнеси</span>
+                <h1>Професионални уебсайтове за вашия бизнес</h1>
                 <p class="hero-subtitle">
-                    Модерен уебсайт, който работи перфектно на телефон и помага на нови клиенти да ви открият. Готов до 7 дни.
+                    Модерен уебсайт, който работи перфектно на телефон и помага на нови клиенти да ви открият. Готов до 7 дни. Достъпни цени за малки бизнеси.
                 </p>
                 <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                            <polyline points="22,6 12,13 2,6"></polyline>
-                        </svg>
-                        Свържете се с мен
-                    </a>
-                    <a href="example.html" class="btn btn-secondary" target="_blank">Виж примерен сайт</a>
+                    <a href="#contact" class="btn btn-primary">Свържете се с мен</a>
+                    <a href="#examples" class="btn btn-secondary">Вижте примери</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXAMPLES SECTION -->
+    <section class="examples-section" id="examples">
+        <div class="container">
+            <div class="examples-header">
+                <span class="section-subtitle">Примери</span>
+                <h2>Вижте какво мога да създам за вас</h2>
+                <p>
+                    Разгледайте примери от различни типове бизнеси. Всеки сайт е уникален и създаден специално за конкретния бизнес.
+                </p>
+            </div>
+            <div class="examples-grid">
+                <div class="example-card">
+                    <div class="example-card-image">
+                        <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Salon">
+                    </div>
+                    <div class="example-card-content">
+                        <h3>Салон за красота</h3>
+                        <p>
+                            Модерен сайт за салони за красота с онлайн резервации, галерия и ценоразпис.
+                        </p>
+                        <a href="salon.html" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Виж сайта</a>
+                    </div>
+                </div>
+                <div class="example-card">
+                    <div class="example-card-image">
+                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Gym">
+                    </div>
+                    <div class="example-card-content">
+                        <h3>Фитнес зала</h3>
+                        <p>
+                            Динамичен сайт за фитнес зали с програми, графици и членски планове.
+                        </p>
+                        <a href="gym.html" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Виж сайта</a>
+                    </div>
+                </div>
+                <div class="example-card">
+                    <div class="example-card-image">
+                        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Clothing Store">
+                    </div>
+                    <div class="example-card-content">
+                        <h3>Магазин за дрехи</h3>
+                        <p>
+                            Елегантен е-комерс сайт за модни магазини с каталог продукти и онлайн поръчки.
+                        </p>
+                        <a href="clothing.html" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Виж сайта</a>
+                    </div>
+                </div>
+                <div class="example-card">
+                    <div class="example-card-image">
+                        <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Consultant">
+                    </div>
+                    <div class="example-card-content">
+                        <h3>Бизнес консултант</h3>
+                        <p>
+                            Професионален сайт за консултанти с портфолио, услуги и контактна форма.
+                        </p>
+                        <a href="consultant.html" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Виж сайта</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -819,38 +848,24 @@
             <div class="who-content">
                 <div class="who-text">
                     <span class="section-subtitle">За кого е това</span>
-                    <h2>Създадено специално за салони и студия за красота</h2>
+                    <h2>Създадено специално за малки бизнеси</h2>
                     <p>
-                        Ако имате фризьорски салон, козметично студио, салон за маникюр или студио за красота — този сайт е точно за вас.
+                        Ако имате малък бизнес и искате професионален уебсайт без сложни технологии — този сайт е точно за вас.
                     </p>
                     <p>
                         Знам, че нямате време за сложни технологии. Затова <span class="who-highlight">аз се грижа за всичко</span> — вие само ми казвате какво искате да покажете на клиентите си.
                     </p>
                     <ul class="who-list">
-                        <li>Фризьорски салони</li>
-                        <li>Козметични студия</li>
-                        <li>Салони за маникюр и педикюр</li>
-                        <li>Студия за красота</li>
-                        <li>SPA центрове</li>
+                        <li>Ресторанти и кафенета</li>
+                        <li>Салони за красота и фитнес зали</li>
+                        <li>Магазини и е-комерс</li>
+                        <li>Консултанти и фрийлансъри</li>
+                        <li>Малки производители и занаятчии</li>
                     </ul>
                 </div>
                 <div class="who-image">
-                    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Салон за красота">
+                    <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Small Business">
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- DEMO SECTION -->
-    <section class="demo-section" id="demo">
-        <div class="container">
-            <div class="demo-content">
-                <span class="section-subtitle">Примерен сайт</span>
-                <h2>Вижте как може да изглежда вашият сайт</h2>
-                <p>
-                    Подготвил съм примерен сайт за салон за красота, за да видите какво получавате. Прост, красив и лесен за използване от клиентите ви.
-                </p>
-                <a href="example.html" class="btn btn-primary" target="_blank">Виж примерен сайт →</a>
             </div>
         </div>
     </section>
@@ -864,24 +879,51 @@
             </div>
             <div class="benefits-grid">
                 <div class="benefit-card">
-                    <div class="benefit-icon">📱</div>
+                    <div class="benefit-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                            <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                        </svg>
+                    </div>
                     <h3>Работи перфектно на телефон</h3>
-                    <p>Повечето клиенти ви търсят от мобилния си телефон. Сайтът ви ще изглежда отлично на всяко устройство.</p>
+                    <p>
+                        Повечето клиенти ви търсят от мобилния си телефон. Сайтът ви ще изглежда отлично на всяко устройство.
+                    </p>
                 </div>
                 <div class="benefit-card">
-                    <div class="benefit-icon">✨</div>
+                    <div class="benefit-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                            <path d="M2 17l10 5 10-5"></path>
+                            <path d="M2 12l10 5 10-5"></path>
+                        </svg>
+                    </div>
                     <h3>Изглежда модерно и професионално</h3>
-                    <p>Създава добро първо впечатление още преди клиентът да влезе в салона ви.</p>
+                    <p>
+                        Създава добро първо впечатление още преди клиентът да влезе в магазина ви или да се свърже с вас.
+                    </p>
                 </div>
                 <div class="benefit-card">
-                    <div class="benefit-icon">📞</div>
+                    <div class="benefit-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                    </div>
                     <h3>Лесен контакт с един клик</h3>
-                    <p>Клиентите ви могат да се обадят или да ви пишат директно от сайта — без да търсят номера.</p>
+                    <p>
+                        Клиентите ви могат да се обадят или да ви пишат директно от сайта — без да търсят номера.
+                    </p>
                 </div>
                 <div class="benefit-card">
-                    <div class="benefit-icon">🛡️</div>
+                    <div class="benefit-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                    </div>
                     <h3>Изграждате доверие онлайн</h3>
-                    <p>Когато ви потърсят в Google, виждат истински, професионален бизнес — не празна страница.</p>
+                    <p>
+                        Когато ви потърсят в Google, виждат истински, професионален бизнес — не празна страница.
+                    </p>
                 </div>
             </div>
         </div>
@@ -898,17 +940,23 @@
                 <div class="step">
                     <div class="step-number">1</div>
                     <h3>Кратък разговор</h3>
-                    <p>Пишете ми по имейл или през формата. Разказвате ми за салона си — отнема само няколко минути.</p>
+                    <p>
+                        Пишете ми по имейл или през формата. Разказвате ми за бизнеса си — отнема само няколко минути.
+                    </p>
                 </div>
                 <div class="step">
                     <div class="step-number">2</div>
                     <h3>Аз създавам сайта</h3>
-                    <p>В рамките на 7 дни подготвям готовия ви сайт. Вие го преглеждате и казвате ако искате промени.</p>
+                    <p>
+                        В рамките на 7 дни подготвям готовия ви сайт. Вие го преглеждате и казвате ако искате промени.
+                    </p>
                 </div>
                 <div class="step">
                     <div class="step-number">3</div>
                     <h3>Вашият бизнес е онлайн</h3>
-                    <p>Сайтът е готов и достъпен за всички. Клиентите вече могат да ви открият в интернет.</p>
+                    <p>
+                        Сайтът е готов и достъпен за всички. Клиентите вече могат да ви открият в интернет.
+                    </p>
                 </div>
             </div>
         </div>
@@ -920,7 +968,9 @@
             <div class="pricing-header">
                 <span class="section-subtitle">Цени</span>
                 <h2>Колко струва?</h2>
-                <p>Прозрачно ценообразуване. Без скрити такси. Без изненади.</p>
+                <p>
+                    Прозрачно ценообразуване. Без скрити такси. Без изненади.
+                </p>
             </div>
             <div class="pricing-card">
                 <span class="pricing-badge">-20% за първите 5</span>
@@ -930,18 +980,16 @@
                     <span class="note">в зависимост от желаните функции</span>
                 </div>
                 <ul class="pricing-features">
-                    <li><span class="check">✓</span> Модерен дизайн, пригоден за телефон</li>
-                    <li><span class="check">✓</span> Всички ваши услуги и цени</li>
-                    <li><span class="check">✓</span> Снимки на салона (ако имате)</li>
-                    <li><span class="check">✓</span> Контакти и социални мрежи</li>
-                    <li><span class="check">✓</span> Помощ след пускането на сайта</li>
-                    <li><span class="check">✓</span> Готов до 7 дни</li>
+                    <li><span class="check">✓</span> <span>Модерен дизайн, пригоден за телефон</span></li>
+                    <li><span class="check">✓</span> <span>Всички ваши услуги и продукти</span></li>
+                    <li><span class="check">✓</span> <span>Снимки на бизнеса ви</span></li>
+                    <li><span class="check">✓</span> <span>Контакти и социални мрежи</span></li>
+                    <li><span class="check">✓</span> <span>Помощ след пускането на сайта</span></li>
+                    <li><span class="check">✓</span> <span>Готов до 7 дни</span></li>
                 </ul>
-                <a href="#contact" class="btn btn-primary" style="width: 100%; justify-content: center;">
-                    Искам оферта
-                </a>
+                <a href="#contact" class="btn btn-primary" style="width: 100%; justify-content: center;">Искам оферта</a>
                 <div class="pricing-guarantee">
-                    <strong>Първите 5 клиента получават 20% отстъпка</strong> — искам да изградя портфолио със салони за красота.
+                    <strong>Първите 5 клиента получават 20% отстъпка</strong> — <span>искам да изградя портфолио с малки бизнеси.</span>
                 </div>
             </div>
         </div>
@@ -953,8 +1001,10 @@
             <div class="contact-content">
                 <div class="contact-header">
                     <span class="section-subtitle" style="color: var(--color-primary);">Контакти</span>
-                    <h2>Готови ли сте да изведете салона си онлайн?</h2>
-                    <p>Попълнете формата или ми пишете на имейл. Ще ви отговоря до 24 часа.</p>
+                    <h2>Готови ли сте да изведете бизнеса си онлайн?</h2>
+                    <p>
+                        Попълнете формата или ми пишете на имейл. Ще ви отговоря до 24 часа.
+                    </p>
                 </div>
                 
                 <div class="contact-grid">
@@ -970,23 +1020,22 @@
                                 <input type="email" id="email" name="email" placeholder="maria@example.com" required>
                             </div>
                             <div class="form-group">
-                                <label for="message">Разкажете за вашия салон</label>
-                                <textarea id="message" name="message" placeholder="Какви услуги предлагате? Какво бихте искали да покажете на сайта?" required></textarea>
+                                <label for="message">Разкажете за вашия бизнес</label>
+                                <textarea id="message" name="message" placeholder="Какъв тип бизнес имате? Какво бихте искали да покажете на сайта?" required></textarea>
                             </div>
-                            <button type="submit" class="btn btn-primary">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <line x1="22" y1="2" x2="11" y2="13"></line>
-                                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-                                </svg>
-                                Изпрати съобщение
-                            </button>
+                            <button type="submit" class="btn btn-primary">Изпрати съобщение</button>
                         </form>
                     </div>
                     
                     <!-- Contact Info -->
                     <div class="contact-info">
                         <div class="contact-info-item">
-                            <div class="contact-info-icon">✉️</div>
+                            <div class="contact-info-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                            </div>
                             <div class="contact-info-text">
                                 <h4>Имейл</h4>
                                 <p><a href="mailto:stIvailo05@gmail.com">stIvailo05@gmail.com</a></p>
@@ -994,7 +1043,12 @@
                             </div>
                         </div>
                         <div class="contact-info-item">
-                            <div class="contact-info-icon">🌍</div>
+                            <div class="contact-info-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                    <path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 7 8 11.7z"></path>
+                                </svg>
+                            </div>
                             <div class="contact-info-text">
                                 <h4>Локация</h4>
                                 <p>България</p>
@@ -1016,11 +1070,11 @@
 
     <!-- FOOTER -->
     <footer>
-        <p>© 2026 Ивайло Стоянов — Уебсайтове за салони за красота. Всички права запазени.</p>
+        <p>© 2026 Ивайло Стоянов — Уебсайтове за малки бизнеси. Всички права запазени.</p>
     </footer>
 
-    <!-- Smooth scroll for anchor links -->
     <script>
+        // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -1034,7 +1088,7 @@
             });
         });
 
-        // Simple form handling (you'll need to connect this to your backend)
+        // Simple form handling
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
             alert('Благодаря за съобщението! Ще се свържа с вас скоро.');
